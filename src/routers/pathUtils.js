@@ -183,7 +183,10 @@ export const createPathParser = (
       }
     }
 
-    return null;
+    return NavigationActions.navigate({
+      routeName: 'SignIn',
+      params: inputParams,
+    });
   };
   const getPathAndParamsForRoute = route => {
     const { routeName, params } = route;
